@@ -7,13 +7,14 @@
 */
 (function () {
     const SLIDES = [
-        { src: "Slideshow/Poster1.jpg", alt: "One eye guy pictured in a window pane", caption: "One eye guy pictured in a window pane" },
-        { src: "Slideshow/Poster2.jpg", alt: "One Eye Guy with Austin's installation", caption: "One eye guy with Austin's installation" },
+        { src: "Slideshow/Poster1.JPG", alt: "One eye guy pictured in a window pane", caption: "One eye guy pictured in a window pane" },
+        { src: "Slideshow/Poster2.JPG", alt: "One eye Guy with Austin's installation", caption: "One eye guy with Austin's installation" },
         { src: "Slideshow/Poster3.jpg", alt: "Auto-portrait", caption: "Auto-portrait" },
         { src: "Slideshow/Poster4.jpg", alt: "AMEN DVD Postcard", caption: "AMEN DVD Postcard" },
         { src: "Slideshow/Poster5.png", alt: 'Frame from "nhb ama njmt(ch) nbki" (2026)', caption: 'Frame from "nhb ama njmt(ch) nbki" (2026)' },
         { src: "Slideshow/Poster6.png", alt: 'Frame from "Reflection" (2026)', caption: 'Frame from "Reflection" (2026)' },
         { src: "Slideshow/Poster7.png", alt: 'Frame from "ME + YOU"', caption: 'Frame from "ME + YOU"' },
+        { src: "Slideshow/Poster8.JPG", alt: "Auto-portrait", caption: "Auto-portrait" },
     ];
 
     const INTERVAL = 24000; // 24 seconds between pictures
