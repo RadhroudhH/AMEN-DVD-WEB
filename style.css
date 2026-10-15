@@ -1,0 +1,112 @@
+body {
+    background: black;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 0 0 0.6em;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+video {
+    width: 100%;
+    display: block;
+    margin: 0.8em 0;
+}
+
+.section-title {
+    font-weight: bold;
+    font-style: italic;
+    margin: 1.2em 0 0.2em;
+}
+
+.links a {
+    display: block;
+    width: fit-content;
+}
+
+.divider {
+    margin: 1em 0;
+    letter-spacing: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0.8em 0;
+}
+
+.Back {
+    color: darkkhaki;
+}
+/* Film section styles */
+.film {
+    margin-bottom: 3em;
+}
+
+.film-title {
+    margin: 0;
+}
+
+.film-synopsis,
+.film-duration {
+    margin: 0.6em 0 0;
+}
+
+.film-thumb {
+    display: block;
+    margin-top: 0.8em;
+}
+
+.film-thumb img {
+    width: 100%;
+    display: block;
+}
+
+/* Image or video pinned on the right side */
+.side-media {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    width: 35vw;
+}
+
+.side-media img,
+.side-media video {
+    margin: 0;
+}
+
+.side-caption {
+    font-style: italic;
+    font-size: 0.85em;
+    margin: 0.4em 0 0;
+}
+
+/* On phones and small windows: put it under the text instead */
+@media (max-width: 1000px) {
+    .side-media {
+        position: static;
+        width: 100%;
+        margin-top: 2em;
+    }
+}
