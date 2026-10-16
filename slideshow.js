@@ -4,13 +4,14 @@
   - Crossfades to the next picture every 24 seconds.
   - Each reload starts on the next picture in the list (set order, loops back to the start).
   - Add/remove pictures in the SLIDES list below.
+  - Add  guy: { left: "..", top: ".." }  to ONE picture to hide the One Eye Guy on it.
 */
 (function () {
     const SLIDES = [
         { src: "Slideshow/Poster1.JPG", alt: "One eye guy pictured in a window pane", caption: "One eye guy pictured in a window pane" },
         { src: "Slideshow/Poster2.JPG", alt: "One eye Guy with Austin's installation", caption: "One eye guy with Austin's installation" },
         { src: "Slideshow/Poster3.jpg", alt: "Auto-portrait", caption: "Auto-portrait" },
-        { src: "Slideshow/Poster4.jpg", alt: "AMEN DVD Postcard", caption: "AMEN DVD Postcard" },
+        { src: "Slideshow/Poster4.jpg", alt: "AMEN DVD Postcard", caption: "AMEN DVD Postcard", guy: { left: "75%", top: "60%" } },
         { src: "Slideshow/Poster5.png", alt: 'Frame from "nhb ama njmt(ch) nbki" (2026)', caption: 'Frame from "nhb ama njmt(ch) nbki" (2026)' },
         { src: "Slideshow/Poster6.png", alt: 'Frame from "Reflection" (2026)', caption: 'Frame from "Reflection" (2026)' },
         { src: "Slideshow/Poster7.png", alt: 'Frame from "ME + YOU"', caption: 'Frame from "ME + YOU"' },
@@ -40,7 +41,21 @@
         } catch (e) {}
     }
 
+    // Show/hide the hidden One Eye Guy depending on the picture
+    function placeGuy(slide) {
+        const guy = box.querySelector("img.oeg");
+        if (!guy) return; // none on the page, or already caught
+        if (slide.guy) {
+            guy.style.left = slide.guy.left;
+            guy.style.top = slide.guy.top;
+            guy.style.display = "block";
+        } else {
+            guy.style.display = "none";
+        }
+    }
+
     // --- Show the first picture right away ---
+    placeGuy(SLIDES[index]);
     imgA.src = SLIDES[index].src;
     imgA.alt = SLIDES[index].alt;
     caption.textContent = SLIDES[index].caption;
@@ -63,6 +78,7 @@
         imgB.onload = function () {
             imgB.classList.add("active"); // fade new one in
             imgA.classList.remove("active"); // fade old one out
+            placeGuy(slide);
 
             // Caption: fade out, swap text, fade back in
             caption.classList.add("hidden");

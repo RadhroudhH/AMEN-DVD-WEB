@@ -53,9 +53,12 @@ video {
 
 img {
     width: 100%;
-    max-width: 640px;
     display: block;
     margin: 0.8em 0;
+}
+
+.side-stack img {
+    margin: 0 0 0.8em;
 }
 
 .Back {
@@ -143,4 +146,23 @@ img {
 
 .side-caption.hidden {
     opacity: 0;
+}
+
+.film-thumb {
+    position: relative;
+    z-index: 1;
+}
+
+/* One Eye Guy: always out of the page flow */
+img.oeg {
+    position: absolute;
+    width: 60px;
+    max-width: none;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+img.oeg.oeg-behind {
+    z-index: 0;
 }
