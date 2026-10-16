@@ -166,3 +166,18 @@ img.oeg {
 img.oeg.oeg-behind {
     z-index: 0;
 }
+
+.bio p {
+    margin: 0 0 1em;
+}
+
+.bio-source {
+    font-style: italic;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.side-stack.two-up {
+    display: flex;
+    gap: 12px;
+}

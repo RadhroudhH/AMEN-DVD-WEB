@@ -76,7 +76,7 @@ body:has(.ph-layout) {
         display: none;
     }
     .ph-grid {
-        columns: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
     .ph-grid img {
         opacity: 1;
