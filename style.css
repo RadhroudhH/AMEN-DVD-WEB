@@ -92,7 +92,7 @@ img {
 .side-media {
     position: absolute;
     top: 150px;
-    right: 150px;
+    right: clamp(20px, calc(100vw - 68em - 60px), 150px);
     width: 28em;
 }
 
@@ -108,7 +108,7 @@ img {
 }
 
 /* On phones and small windows: put it under the text instead */
-@media (max-width: 1550px) {
+@media (max-width: 1100px) {
     .side-media {
         position: static;
         width: 100%;
