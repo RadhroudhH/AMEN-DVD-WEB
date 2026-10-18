@@ -79,3 +79,29 @@ body:has(.vg-grid) {
     max-height: 100%;
     margin: 0;
 }
+
+/* ---------- Small video grid under the Alphabet series ---------- */
+.mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 3em;
+}
+
+.mini-title {
+    font-weight: bold;
+    font-size: 1.24em;
+    margin: 0 0 0.4em;
+}
+
+.mini-grid video {
+    width: 100%;
+    margin: 0;
+    background: #111;
+}
+
+@media (max-width: 800px) {
+    .mini-grid {
+        grid-template-columns: 1fr;
+    }
+}

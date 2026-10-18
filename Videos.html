@@ -5,19 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>AMEN DVD WEB - Videos</title>
         <link rel="icon" type="image/png" href="DVD ICON.png" />
-        <link rel="stylesheet" href="videogrid.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="videogrid.css" />
     </head>
     <body>
         <h2 class="Back"><a href="index.html">HOME</a></h2>
         <h2>VIDEOS</h2>
 
-        <h2>The Alphabet Series</h2>
-
+        <p class="mini-title">The Alphabet Series</p>
         <div class="vg-grid"></div>
 
+        <div class="mini-grid">
+            <div class="mini-item">
+                <p class="mini-title">Violet Vermin Mouhit Exhibit Video</p>
+                <video src="Videos/5.mp4" controls loop playsinline preload="metadata"></video>
+            </div>
+            <div class="mini-item">
+                <p class="mini-title">THE WORLD IS REAL</p>
+                <video src="Videos/8.mp4" controls loop playsinline preload="metadata"></video>
+            </div>
+            <div class="mini-item">
+                <p class="mini-title">Warcha: Bat7a Mouch Normal Parade</p>
+                <video src="Videos/10.mp4" controls loop playsinline preload="metadata"></video>
+            </div>
+        </div>
+
+        <script>
+            // Default volume 25%, same as the Alphabet series
+            document.querySelectorAll(".mini-grid video").forEach(function (v) {
+                v.volume = 0.25;
+            });
+        </script>
         <script src="videogrid.js"></script>
-    </body>
-    <script src="oneeye.js"></script>
-    <script src="lightbox.js"></script>
-</html>
+        <script

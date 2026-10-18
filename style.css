@@ -2,7 +2,7 @@ body {
     background: black;
     color: white;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.4;
     margin: 0;
     padding: 20px;
@@ -19,7 +19,7 @@ a:hover {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1.1em;
     margin: 0 0 0.6em;
 }
 
@@ -93,12 +93,12 @@ img {
     position: absolute;
     top: 150px;
     right: 150px;
-    width: 35vw;
+    width: 28em;
 }
 
 .side-media img,
 .side-media video {
-    margin: 0;
+    margin-bottom: 24px;
 }
 
 .side-caption {
@@ -108,7 +108,7 @@ img {
 }
 
 /* On phones and small windows: put it under the text instead */
-@media (max-width: 1000px) {
+@media (max-width: 1550px) {
     .side-media {
         position: static;
         width: 100%;
